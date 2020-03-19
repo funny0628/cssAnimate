@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>色彩板</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #111;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .square {
+            background-color: #1d1d1d;
+            box-shadow: 0 0 2px #000;
+            margin: 2px;
+            width: 16px;
+            height: 16px;
+            transition: 2s linear;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <div class="square"></div> -->
+    </div>
+</body>
+
+</html>
+<script>
+    // 1.实现map
+    // 2.给每一个小格子注册鼠标移入事件
+    // 3.鼠标移入小格子设置随机的背景颜色,
+    //4.鼠标移出,设置定时器,颜色恢复
+
+    let container = document.getElementsByClassName('container')[0];
+    let colors = ["#e74c3c", "#8e44ad", "#3498db", "#e67e22", "#2ecc71"];
+    let squareTotal = 20000;
+    for (let i = 0; i < squareTotal; i++) {
+        let square = document.createElement('div');
+        square.classList.add("square")
+        container.appendChild(square)
+    }
+    let squareList = document.getElementsByClassName('square');
+    // 第一次循环,给每个div注册事件
+    for (let i = 0; i < squareList.length; i++) { 
+        squareList[i].setAttribute('squareIndex', i)
+        squareList[i].onmouseover = function (e) {
+            e.target.style.backgroundColor = getRandomColor();
+            setInterval(() => {
+                e.target.style.backgroundColor = "#1d1d1d";
+            }, 2000);
+        }
+    }
+
+    function getRandomColor(){
+        let numRed = Math.floor(Math.random()*256)
+        let numBlue = Math.floor(Math.random()*256)
+        let numGreen = Math.floor(Math.random()*256)      
+        return `rgb(${numRed},${numBlue},${numGreen})`
+    }
+</script>

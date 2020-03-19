@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>爱心加载</title>
+    <style>
+    html,body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background-color: #ccc;
+    }
+    .container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .header {
+        position: relative;
+        width: 138px;
+        /* display: flex; */
+    }
+    [class*='header-']{
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        top: -5px;
+        border-radius: 5px;
+        
+    }
+    .header-0,
+    .header-8 {
+        animation: header-0 3.2s infinite;
+    }
+    .header-1,
+    .header-7 {
+        animation: header-1 3.2s infinite;
+    }
+    .header-2,
+    .header-6 {
+        animation: header-2 3.2s infinite;
+    }
+    .header-3,
+    .header-5 {
+        animation: header-3 3.2s infinite;
+    }
+    .header-4 {
+        animation: header-4 3.2s infinite;
+    }
+
+@keyframes header-0 {
+    0%,
+    10%,
+    90%,
+    100% {
+        height: 10px;
+        top: -5px;
+    }
+    45%,
+    55% {
+        height: 30px;
+        top: -10px;
+    }
+}
+@keyframes header-1 {
+    0%,
+    10%,
+    90%,
+    100% {
+        height: 10px;
+        top: -5px;
+    }
+    45%,
+    55% {
+        height: 60px;
+        top: -31px;
+    }
+}
+@keyframes header-2 {
+    0%,
+    10%,
+    90%,
+    100% {
+        height: 10px;
+        top: -5px;
+    }
+    45%,
+    55% {
+        height: 80px;
+        top: -37px;
+    }
+}
+@keyframes header-3 {
+    0%,
+    10%,
+    90%,
+    100% {
+        height: 10px;
+        top: -5px;
+    }
+    45%,
+    55% {
+        height: 90px;
+        top: -31px;
+    }
+}
+@keyframes header-4 {
+    0%,
+    10%,
+    90%,
+    100% {
+        height: 10px;
+        top: -5px;
+    }
+    45%,
+    55% {
+        height: 94px;
+        top: -23px;
+    }
+}
+.header-0 {
+    left: 0;
+    animation-delay: 0s;
+    background: #92fe9d;
+
+}
+.header-1 {
+    left: 16px;
+    animation-delay: 0.15s;
+    background: #00c9ff;
+}
+.header-2 {
+    left: 32px;
+    animation-delay: 0.3s;
+    background: #ff758c;
+}
+.header-3 {
+    left: 48px;
+    animation-delay: 0.45s;
+    background: #ff7eb3;
+}
+.header-4 {
+    left: 66px;
+    animation-delay: 0.6s;
+    background: #fa71cd;
+}
+.header-5 {
+    left: 82px;
+    animation-delay: 0.75s;
+    background: #6f86d6;
+}
+.header-6 {
+    left: 98px;
+    animation-delay: 0.9s;
+    background: #f9f586;
+}
+
+.header-7 {
+    left: 114px;
+    animation-delay: 1.05s;
+    background: #b1f4cf;
+}
+.header-8 {
+    left: 130px;
+    animation-delay: 1.2s;
+    background: #fef9d7;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-0"></div>
+            <div class="header-1"></div>
+            <div class="header-2"></div>
+            <div class="header-3"></div>
+            <div class="header-4"></div>
+            <div class="header-5"></div>
+            <div class="header-6"></div>
+            <div class="header-7"></div>
+            <div class="header-8"></div>
+        </div>
+    </div>
+</body>
+</html>

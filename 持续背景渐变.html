@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    html,
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
+    body{
+        font-family: 'montserrat';
+        background: linear-gradient(125deg,#2c3e50,#27ac60,#2980b9,#8e44ad) no-repeat;
+        background-size: 400%;
+        animation: bganimation 5s infinite;
+    }
+    .text {
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 350px 0;
+        font-size: 22px;
+    }
+    @keyframes bganimation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+      
+    }
+    </style>
+</head>
+<body>
+    <div class="text">
+        [HTML&CSS]五分钟实现背景不停渐变效果
+    </div>
+</body>
+</html>

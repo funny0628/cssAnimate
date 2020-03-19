@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            /* background: radial-gradient(200% 100% at bottom center, #f7f7b6, #e96f92); */
+            background: radial-gradient(220% 105% at top center, #1b2947 10%, #75517d 40%, #e96f92 65%, #f7f7b6);
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+
+        .stars {
+            transform: perspective(500px);
+            transform-style: preserve-3d;
+            position: absolute;
+            perspective-origin: 50% 100%;
+            left: 50%;
+            bottom: 0;
+            animation: rotate 90s infinite linear;
+            -webkit-animation:rotate 90s infinite linear;
+        }
+
+        .star {
+            width: 2px;
+            height: 2px;
+            background: #f7f7b8;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(0);
+            }
+
+            100% {
+                transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(-360deg);
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="stars">
+        <div class="star"></div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    let starCount = 800;
+    let distance = 800;
+    let Stars = document.getElementsByClassName('stars')[0];
+    for (let i = 0; i < starCount; i++) {
+        //生成随机的位置
+        let speed = 0.2 + (Math.random() * 1);
+        let this_distance = distance + (Math.random() * 300);
+        let Div = document.createElement('div');
+        // console.log(Div);
+        Div.classList.add('star');
+        Div.style.transformOrigin = `0 0 ${this_distance}px`
+        Div.style.transform = `translate3d(0,0,-${this_distance}px) rotateY(${(Math.random() * 360)}deg) rotateX(${(Math.random() * -50)}deg) scale(${speed},${speed})`
+        Stars.appendChild(Div);
+    }
+
+
+
+</script>
