@@ -20,5 +20,5 @@ css的动画效果展示
 ![色彩板](https://github.com/funny0628/cssAnimate/blob/master/image/%E8%89%B2%E5%BD%A9%E6%9D%BF.gif)
 
 >刮刮乐
-![刮刮乐](https://github.com/funny0628/cssAnimate/blob/master/image/%E5%88%AE%E5%88%AE%E4%B9%90.gif)
+![刮刮乐](https://github.com/funny0628/cssAnimate/blob/master/image/Scrapeopen.gif)
 
