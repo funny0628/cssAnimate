@@ -5,7 +5,7 @@ css的动画效果展示
 ![持续背景渐变](https://github.com/funny0628/cssAnimate/blob/master/image/%E6%B8%90%E5%8F%981.gif)
 
 >渐变加载
-![渐变加载](https://github.com/funny0628/cssAnimate/blob/master/image/%E5%8A%A0%E8%BD%BD.gif)
+![渐变加载](https://github.com/funny0628/cssAnimate/blob/master/img/%E6%B8%90%E5%8F%98%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB.gif)
 
 >炫彩button
 ![炫彩button](https://github.com/funny0628/cssAnimate/blob/master/image/button.gif)
