@@ -20,7 +20,7 @@ css的动画效果展示
 ![色彩板](https://github.com/funny0628/cssAnimate/blob/master/image/coloredition.gif)
 
 >刮刮乐
-![刮刮乐]( https://github.com/funny0628/cssAnimate/blob/master/image/Scrapeopen.gif)
+![刮刮乐](./image/Scrapeopen.gif)
 
 >侧边栏导航
 ![侧边栏导航](./%E4%BE%A7%E8%BE%B9%E6%A0%8F%E5%AF%BC%E8%88%AA//image/iShot2022-12-07%2013.47.44.gif)
