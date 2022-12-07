@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      height: 100vh;
+      background: linear-gradient(#99f,#f99);
+    }
+    body,
+    .navbar,
+    .navbar ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+    }
+
+    .navbar {
+      position: relative;
+      padding: 20px;
+      border-radius: 50px;
+      background-color: #fff;
+      cursor: pointer;
+    }
+    .navbar input {
+      height: 40px;
+      width: 40px;
+      opacity: 0; 
+    }
+    .navbar span {
+      position: absolute;
+      left: 25px;
+      /* 将两条线都放在一起,然后单独设置第二条的位置,calc方法可以自动计算数值 */
+      top: calc(50% - 10px);
+      width: 30px;
+      height: 4px;
+      border-radius: 15px;
+      background-color: #999;
+      /* 这里解决一个问题,现在span覆盖着复选框,我们鼠标放在span点不中复选框,写这个属性就能解决这个问题,几百年鼠标放到span撒花姑娘点击也能够选中或者未选中复选框  */
+      pointer-events: none;
+    }
+    .navbar span:nth-child(3) {
+      top: calc(50% + 6px);
+    }
+    .navbar ul {
+      width: 0;
+      overflow: hidden;
+      transition: all 0.5s;
+      /* 文字不要换行 */
+      white-space: nowrap;
+    }
+    .navbar ul li  a{
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 700;
+      color: #333;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+    .navbar ul li a:hover {
+      color: #fb7299;
+    }
+    /* :checked ~ 是兄弟选择器,查找同一级的ul */
+    .navbar input:checked ~ ul {
+      width: 350px;
+    }
+
+    .navbar input:checked ~ span:nth-child(2) {
+      top: calc(50% - 2px);
+      transform: rotate(45deg);
+      background-color: #fb7299;
+      transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+    }
+
+    .navbar input:checked ~ span:nth-child(3) {
+      top: calc(50% - 2px);
+      transform: rotate(-45deg);
+      background-color: #fb7299;
+      transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <input type="checkbox">
+    <span></span>
+    <span></span>
+    <ul>
+      <li><a href="javascript:void(0);">点赞</a></li>
+      <li><a href="javascript:void(0);">投币</a></li>
+      <li><a href="javascript:void(0);">收藏</a></li>
+      <li><a href="javascript:void(0);">关注</a></li>
+      <li><a href="javascript:void(0);">分享</a></li>
+    </ul>
+  </div>
+</body>
+</html>
