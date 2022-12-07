@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    li {
+      padding: 10px ;
+      box-sizing: border-box;
+    }
+    li img {
+      width: 220px;
+      height: 150px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <ul>
+      <li>
+        <img src="http://streetwill.co/uploads/post/photo/896/medium_2x__Pcwl5tp7xzzvC-AeAUgSCCbwyJFry59kZkqimtXNnY.jpg" baseImage="http://streetwill.co/uploads/post/photo/896/medium_2x__Pcwl5tp7xzzvC-AeAUgSCCbwyJFry59kZkqimtXNnY.jpg" >
+      </li>
+      <li>
+        <img baseImage="http://streetwill.co/uploads/post/photo/896/medium_2x__Pcwl5tp7xzzvC-AeAUgSCCbwyJFry59kZkqimtXNnY.jpg" >
+      </li>
+      <li>
+        <img baseImage="http://streetwill.co/uploads/post/photo/896/medium_2x__Pcwl5tp7xzzvC-AeAUgSCCbwyJFry59kZkqimtXNnY.jpg" >
+      </li>
+      <li>
+        <img baseImage="http://streetwill.co/uploads/post/photo/896/medium_2x__Pcwl5tp7xzzvC-AeAUgSCCbwyJFry59kZkqimtXNnY.jpg" >
+      </li>
+      <li>
+        <img baseImage="http://streetwill.co/uploads/post/photo/896/medium_2x__Pcwl5tp7xzzvC-AeAUgSCCbwyJFry59kZkqimtXNnY.jpg" >
+      </li>
+      <li>
+        <img baseImage="http://streetwill.co/uploads/post/photo/896/medium_2x__Pcwl5tp7xzzvC-AeAUgSCCbwyJFry59kZkqimtXNnY.jpg" >
+      </li>
+      <li>
+        <img baseImage="http://streetwill.co/uploads/post/photo/896/medium_2x__Pcwl5tp7xzzvC-AeAUgSCCbwyJFry59kZkqimtXNnY.jpg" >
+      </li>
+      <li>
+        <img baseImage="http://streetwill.co/uploads/post/photo/896/medium_2x__Pcwl5tp7xzzvC-AeAUgSCCbwyJFry59kZkqimtXNnY.jpg" >
+      </li>
+      <li>
+        <img baseImage="http://streetwill.co/uploads/post/photo/896/medium_2x__Pcwl5tp7xzzvC-AeAUgSCCbwyJFry59kZkqimtXNnY.jpg" >
+      </li>
+      <li>
+        <img baseImage="http://streetwill.co/uploads/post/photo/896/medium_2x__Pcwl5tp7xzzvC-AeAUgSCCbwyJFry59kZkqimtXNnY.jpg" >
+      </li>
+      <li>
+        <img baseImage="http://streetwill.co/uploads/post/photo/896/medium_2x__Pcwl5tp7xzzvC-AeAUgSCCbwyJFry59kZkqimtXNnY.jpg" >
+      </li>
+      <li>
+        <img baseImage="http://streetwill.co/uploads/post/photo/896/medium_2x__Pcwl5tp7xzzvC-AeAUgSCCbwyJFry59kZkqimtXNnY.jpg" >
+      </li>
+      <li>
+        <img baseImage="http://streetwill.co/uploads/post/photo/896/medium_2x__Pcwl5tp7xzzvC-AeAUgSCCbwyJFry59kZkqimtXNnY.jpg" >
+      </li>
+      <li>
+        <img baseImage="http://streetwill.co/uploads/post/photo/896/medium_2x__Pcwl5tp7xzzvC-AeAUgSCCbwyJFry59kZkqimtXNnY.jpg" >
+      </li>
+      <li>
+        <img baseImage="http://streetwill.co/uploads/post/photo/896/medium_2x__Pcwl5tp7xzzvC-AeAUgSCCbwyJFry59kZkqimtXNnY.jpg" >
+      </li>
+      <li>
+        <img baseImage="http://streetwill.co/uploads/post/photo/896/medium_2x__Pcwl5tp7xzzvC-AeAUgSCCbwyJFry59kZkqimtXNnY.jpg" >
+      </li>
+      <li>
+        <img baseImage="http://streetwill.co/uploads/post/photo/896/medium_2x__Pcwl5tp7xzzvC-AeAUgSCCbwyJFry59kZkqimtXNnY.jpg" >
+      </li>
+    </ul>
+  </div>
+  <script>
+    /**
+     * 现在这里介绍一下原理,图片懒加载的原理就是当页面滚动时,图片出现在页面的可视区域的时候再加载图片进而显示
+     * 我们需要知道的是页面窗口的高度也就是下面的winHeight 还有就是img元素距离窗口顶部的距离需要getBoundingClientRect;
+    */
+    (function(){
+      let images = document.querySelectorAll('img');
+      let lis = document.querySelectorAll('li');
+      let winHeight = window.innerHeight;
+      imgScroll();
+      window.onscroll = imgScroll;
+      function imgScroll(){
+        for (let i = 0; i < images.length; i++) {
+          const element = images[i];
+          if(lis[i].getBoundingClientRect().top < winHeight){
+            element.src = element.getAttribute('baseImage');
+          }
+        }
+      }
+    })();
+    //完美结束啦,
+
+    // let images = document.querySelectorAll('img');
+    // let lis = document.querySelectorAll('li');
+    // let winHeight = window.innerHeight;
+    
+    // 现在就是需要添加页面滚动事件的时候了
+    // window.onscroll = function(){
+    //   for (let i = 0; i < images.length; i++) {
+    //     const element = images[i];
+    //     if(lis[i].getBoundingClientRect().top < winHeight){
+    //       element.src = element.getAttribute('baseImage');
+    //     }
+    //   }
+    // }
+    //由前面的例子尅看出,我们的效果已经实现了,现在就进行一下代码的优化吧
+
+    
+  </script>
+</body>
+</html>
