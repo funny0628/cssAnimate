@@ -33,4 +33,4 @@ css的动画效果展示
 ![js面相对象](./image/object.gif)
 
 >伸缩导航
-![js面相对象](./image/伸缩导航.gif)
+![伸缩导航](./image/伸缩导航.gif)
