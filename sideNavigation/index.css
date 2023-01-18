@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#outbox {
+  width: 500px;
+  height: 600px;
+  border: 1px solid #ccc;
+  margin: 100px auto;
+}
+#side {
+  height: 100%;
+  width: 200px;
+  border: 1px solid #ccc;
+}
+#side #btn {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #DCDBDB;
+}
+#side #btn img {
+  width: 30px;
+  height: 30px;
+}
+
+#side ul {
+  height: 90%;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+#side ul li {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#side ul li p {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#side ul .home{
+  color: #EA6645;
+  left: 10px;
+}
+#side ul .home p{
+  width:50px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #EA6645;
+  box-shadow: 6px 6px 10px #EA6645;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#side ul .about{
+  color: #F1AD3F;
+  left: 10px;
+}
+#side ul .about p{
+  width:50px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #F1AD3F;
+  box-shadow: 6px 6px 10px #F1AD3F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#side ul .messages{
+  color: #4FAD33;
+  left: 10px;
+}
+#side ul .messages p{
+  width:50px;
+  height: 50px;
+  border-radius: 5px;             
+  background-color: #4FAD33;
+  box-shadow: 6px 6px 10px #4FAD33;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#side ul .photos{
+  color: #4EA0EC;
+  left: 10px;
+}
+#side ul .photos p{
+  width:50px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #4EA0EC;
+  box-shadow: 6px 6px 10px #4EA0EC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#side ul .settings{
+  color: #B06CE4;
+  left: 10px;
+}
+#side ul .settings p{
+  width:50px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #B06CE4;
+  box-shadow: 6px 6px 10px #B06CE4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#side ul li img {
+  width: 30px;
+  height: 30px;
+  
+}
+#side ul li span {
+  font-size: 17px;
+  margin-left: 15px;
+}
